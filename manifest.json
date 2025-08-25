@@ -1,0 +1,56 @@
+{
+    "manifest_version": 2.0,
+    "id": "geovis",
+    "type": "module",
+    "name": "Geographic Visualizer",
+    "namespace": "GeoVis",
+    "version": "1.0",
+    "author": "Robert Bispo Fernandes",
+    "url": "https://nbstelecom.com.br",
+    "description": "Módulo para visualização geográfica de sites e links de conexão com status de triggers.",
+    "actions": {
+        "module.geovis.view": {
+            "class": "MapAction",
+            "view": "geovis.view",
+            "layout": "layout.htmlpage"
+        },
+        "api.geovis.data": {
+            "class": "ApiDataAction",
+            "layout": "layout.json"
+        },
+        "module.geovis.config": {
+            "class": "ConfigAction",
+            "view": "config.view",
+            "layout": "layout.htmlpage"
+        },
+        "api.geovis.config.save": {
+            "class": "ConfigSaveAction",
+            "layout": "layout.json"
+        },
+        "widget.geovis.view": {
+            "class": "DashboardWidgetAction",
+            "view": "geovis.widget"
+        },
+        "widget.geovis.edit": {
+            "class": "DashboardWidgetAction",
+            "view": "geovis.widget.config"
+        }
+    },
+    "dashboard_widgets": {
+        "geovis": {
+            "name": "Mapa Geográfico",
+            "description": "Exibe a localização de sites com o status de suas conexões.",
+            "action": "widget.geovis.view"
+        }
+    },
+    "assets": {
+        "js": [
+            "leaflet.js",
+            "geovis.js"
+        ],
+        "css": [
+            "leaflet.css",
+            "geovis.css"
+        ]
+    }
+}

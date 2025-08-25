@@ -1,0 +1,42 @@
+.geovis-map-container {
+    height: 100%;
+    width: 100%;
+}
+
+.geovis-legend {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.legend-line-active, .legend-line-problem {
+    display: inline-block;
+    width: 25px;
+    height: 5px;
+    margin-right: 10px;
+}
+
+.legend-line-active {
+    background-color: #33FF57;
+}
+
+.legend-line-problem {
+    background-color: #FF5733;
+}
